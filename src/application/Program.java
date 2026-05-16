@@ -5,7 +5,7 @@ import model.dao.SellerDao;
 import model.entities.Department;
 import model.entities.Seller;
 
-import java.time.LocalDate;
+import java.util.List;
 
 public class Program {
 
@@ -17,8 +17,12 @@ public class Program {
         Seller seller = sellerDao.findById(3);
         System.out.println(seller);
 
-        System.out.println("=== TEST 2 : findByDepartmentId ===");
-        Department department = sellerDao.findByDepartmentId();
+        System.out.println("\n=== TEST 2 : findByDepartmentId ===");
+        Department department = new Department(2, null);
+        List<Seller> list = sellerDao.findByDepartmentId(department);
+        for (Seller obj : list) {
+            System.out.println(obj);
+        }
     }
 
 }
