@@ -22,6 +22,16 @@ public class Program2 {
         System.out.println("=== TEST 2: findById ===");
         Department department = departmentDao.findById(1);
         System.out.println(department);
+
+        /*
+        System.out.println("=== TEST 3: insert ===");
+        Department newDepartment = new Department(null, "Clothes");
+        departmentDao.insert(newDepartment);
+        System.out.println("Inserted! New id: " + newDepartment.getId());
+        */
+
+        System.out.println("=== TEST 4: update ===");
+        
     }
 
 }
