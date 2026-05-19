@@ -6,11 +6,13 @@ import model.entities.Department;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Program2 {
 
     static void main() {
 
+        Scanner sc = new Scanner(System.in);
         DepartmentDao departmentDao = DaoFactory.createDepartmentDao();
 
         System.out.println("=== TEST 1: findAll ===");
@@ -36,7 +38,13 @@ public class Program2 {
         departmentDao.update(department1);
         System.out.println("Update completed");
 
+        System.out.println("=== TEST 5: delete ===");
+        System.out.print("Enter Id for delete test: ");
+        int id = sc.nextInt();
+        departmentDao.deleteById(id);
+        System.out.println("Department deleted");
 
+        sc.close();
     }
 
 }
