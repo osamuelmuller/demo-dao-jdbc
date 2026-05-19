@@ -18,6 +18,10 @@ public class Program2 {
         for (Department dep : list) {
             System.out.println(dep);
         }
+
+        System.out.println("=== TEST 2: findById ===");
+        Department department = departmentDao.findById(1);
+        System.out.println(department);
     }
 
 }
